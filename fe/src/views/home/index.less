@@ -1,0 +1,65 @@
+@bgc: #00BC70;
+
+.home-container {
+  position: relative;
+  height: calc(100% - 55px);
+  &__header{
+    // position: fixed;
+    // top:0;
+    padding: 12px;
+    height: 80px;
+    background: @bgc;
+    color: #fff;
+    .header-top{
+      line-height: 32px;
+      font-size: 12px;
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 6px;
+      }
+    }
+    .header-bottom{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 5px;
+      &>div{
+        padding: 3px 6px;
+        border-radius: 10px;
+        background: #04643e;
+        margin-left: 12px;
+        i{
+          margin-left: 2px;
+          font-size: 12px;
+            transition: .3s ease;
+            &.isReverse{
+            transform: rotateZ(-180deg);
+          }
+        }
+      }
+    }
+  }
+  &__list{
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    .za-pull{
+      height: 100%;
+    }
+    .bills-item{
+      border: 1px solid rgb(209, 207, 207);
+      border-radius: 10px;
+      margin: 12px;
+      overflow: hidden;
+      .bills-date{
+        height: 28px;
+        padding: 6px 12px;
+        font-weight: 600;
+        background: #f8f8f8;
+        border-bottom: 1px solid rgb(209, 207, 207);
+      }
+      .bill-item:last-of-type{
+        border-bottom: none;
+      }
+    }
+  }
+}
