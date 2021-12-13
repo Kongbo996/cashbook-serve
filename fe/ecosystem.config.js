@@ -13,7 +13,7 @@ module.exports = {
       ref: 'origin/main',
       repo: 'git@github.com:Kongbo996/cashbook-serve.git',
       path: '/root/cashbook-serve/fe',
-      'post-deploy': 'pm2 startOrReload ecosystem.config.js', // -production=false 下载全量包
+            'post-deploy': 'git reset --hard && git checkout main && git pull && npm i --production=false && npm run build && pm2 startOrReload ecosystem.config.js',
       env: {
         NODE_ENV: 'production'
       }
