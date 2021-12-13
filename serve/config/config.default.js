@@ -36,7 +36,7 @@ module.exports = appInfo => {
     // 单数据库信息配置
     client: {
       // host
-      host: 'localhost', //  81.68.165.190
+      host: '10.0.4.10', //  81.68.165.190
       // 端口号
       port: '3306',
       // 用户名
@@ -72,6 +72,14 @@ module.exports = appInfo => {
     origin: '*',
     credentials: true, // 允许cookie跨域
     allowMethods: 'GET,POST,PUT,HEAD,DELETE,PATCH',
+  };
+  
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 7777,
+	    hostname: '0.0.0.0'
+    }
   };
 
   return {
